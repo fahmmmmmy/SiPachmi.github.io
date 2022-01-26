@@ -1,0 +1,74 @@
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+<body style bgcolor="pink">
+    <div>
+        <img src="banner.jpg" width=100% height=25%>
+    </div>
+    <div class="w3-bar w3-black">
+        <button class="w3-bar-item w3-button" onclick="openKota('Profile')">Profile</button>
+        <button class="w3-bar-item w3-button" onclick="openKota('Glasses')">Glasses</button>
+        <button class="w3-bar-item w3-button" onclick="openKota('Shorthair')">Shorthair</button>
+        <button class="w3-bar-item w3-button" onclick="openKota('Longhair')">Longhair</button>
+        <button class="w3-bar-item w3-button" onclick="openKota('Ponytail')">Ponytail</button>
+    </div>
+    <div class="w3-container kota">
+        <center><img src="welcome.gif" weight=50% height="50%"></center>
+    </div>
+
+    <div id="Profile" class="w3-container kota" style="display:none">
+        <center>
+            <h2><b>Profile</b></h2>
+            <p>NIM : 10121241</p>
+            <P>NAMA : BAGUS ALIFAHMI</P>
+            <P>KELAS : IF 6</P>
+        </center>
+        <div>
+            <center> <img src="aku.png" height=50%> </center>
+        </div>
+    </div>
+    <div id="Glasses" class="w3-container kota" style="display:none">
+        <h2><b>Glasses</b></h2>
+        <p>Daya tarik dari wanita yang mengugnakan kacamata</p>
+        <div class="w3-animate-fading">
+            <center> <img src="glasses.jpg" height=50%> </center>
+        </div>
+    </div>
+    <div id="Shorthair" class="w3-container kota" style="display:none">
+        <h2><b>Shorthair</b></h2>
+        <p>Daya tarik dari wanita berambut pendek</p>
+        <div class="w3-animate-zoom">
+            <center> <img src="shorthair.jpg" height=50%> </center>
+        </div>
+    </div>
+    <div id="Longhair" class="w3-container kota" style="display:none">
+        <h2><b>Longhair</b></h2>
+        <p>Daya tarik dari wanita berambut panjang</p>
+        <div class="w3-animate-bottom">
+            <center> <img src="longhair.jpg" height=50%> </center>
+        </div>
+    </div>
+    <div id="Ponytail" class="w3-container kota" style="display:none">
+        <h2><b>Shorthair</b></h2>
+        <p>Daya tarik dari wanita bergaya rambut ponytail</p>
+        <div class="w3-animate-left">
+            <center> <img src="ponytail.jpg" height=50%> </center>
+        </div>
+    </div>
+
+    <script>
+        function openKota(namaKota) {
+            var i;
+            var x = document.getElementsByClassName("kota");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            document.getElementById(namaKota).style.display = "block";
+        }
+    </script>
+</body>
+
+</html>
